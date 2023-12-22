@@ -38,54 +38,54 @@
             <div class="image">
                 <img src="images/photo32.jpg" alt="" srcset="">
             </div>
-            <input type="text" class="form-control"  aria-describedby="emailHelp" id="item"
-                value="Chilli" name="item" readonly>
-            <input type="number" class="form-control" aria-describedby="emailHelp"
-                placeholder="Enter table number" id="table" name="table">
-            <input type="number" class="form-control"  aria-describedby="emailHelp"
-                placeholder="Quntity" id="quntity" name="quntity">
+            <input type="text" class="form-control" aria-describedby="emailHelp" id="item" value="Chilli" name="item"
+                readonly>
+            <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="Enter table number"
+                id="table" name="table">
+            <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="Quntity" id="quntity"
+                name="quntity">
             <select class="form-control" id="half-full" name="half-full">
                 <option value="Half">Select Quntity</option>
                 <option value="Half">Half</option>
                 <option value="Full">Full</option>
             </select>
             <select class="form-control" id="veg-nonveg" name="veg-nonveg">
-              <option value="Veg">Veg</option>
-              <option value="Non-Veg">Non-Veg</option>
-              
-          </select>
-          <input type="text" id="datetime" style="width: 80%;text-align: center; display: none;" name="datetime" >
-          <input type="text" value="100/170" name="amount" style="display: none;">
-          <input type="text" name="Bill" id="displaybill" style="display:none;">
-          <input type="submit" class="btn btn-dark btn-lg btn-block" id="clickbtn" value="Order">
+                <option value="Veg">Veg</option>
+                <option value="Non-Veg">Non-Veg</option>
+
+            </select>
+            <input type="text" id="datetime" style="width: 80%;text-align: center; display: none;" name="datetime">
+            <input type="text" value="100/170" name="amount" style="display: none;">
+            <input type="text" name="Bill" id="displaybill" style="display:none;">
+            <input type="submit" class="btn btn-dark btn-lg btn-block" id="clickbtn" value="Order">
         </form>
         <!-- foem ends  -->
     </div>
 
     <script>
         var date = new Date();
-	var current_date = date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear() +"  "+date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();;
-    document.getElementById('datetime').value = current_date;
+        var current_date = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear() + "  " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();;
+        document.getElementById('datetime').value = current_date;
 
-    let bill = document.getElementById('half-full');
-        
+        let bill = document.getElementById('half-full');
+
         bill.oninput = () => {
             if (bill.value == "Half") {
                 let qnt = document.getElementById('quntity').value;
-                document.getElementById('displaybill').value = eval(100*qnt)+" RS";
+                document.getElementById('displaybill').value = eval(100 * qnt) + " RS";
             }
             if (bill.value == "Full") {
                 let qnt = document.getElementById('quntity').value;
-                document.getElementById('displaybill').value =eval(170*qnt)+" RS" ;
+                document.getElementById('displaybill').value = eval(170 * qnt) + " RS";
             }
-           
+
         }
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwSB6frCs8Ln4mA5DnyOTH024xaS5K7-iy4k5GTtJuSE49Fege4PqzfJnsOHifRuGci/exec'
-    const form = document.forms['order']
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwSB6frCs8Ln4mA5DnyOTH024xaS5K7-iy4k5GTtJuSE49Fege4PqzfJnsOHifRuGci/exec'
+        const form = document.forms['order']
 
-    
-    form.addEventListener('submit', e => {
+
+        form.addEventListener('submit', e => {
             e.preventDefault()
             document.getElementById("clickbtn").classList.remove("btn-dark");
             document.getElementById("clickbtn").classList.add("btn-success");
@@ -95,7 +95,7 @@
                 })
 
         })
-       
+
     </script>
 
     <!-- Optional JavaScript -->
