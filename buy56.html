@@ -50,7 +50,7 @@
                 <option value="Full">Full</option>
             </select>
             <input type="text" id="datetime" style="width: 80%;text-align: center; display: none;" name="datetime" >
-            <input type="text" value="100/170" name="amount" style="display: none;">
+            <input type="text" value="10/20" name="amount" style="display: none;">
             <input type="text" name="Bill" id="displaybill" style="display:none;">
             <input type="submit" class="btn btn-dark btn-lg btn-block" id="clickbtn" value="Order">
            
@@ -68,11 +68,11 @@
         bill.oninput = () => {
             if (bill.value == "Half") {
                 let qnt = document.getElementById('quntity').value;
-                document.getElementById('displaybill').value = eval(100*qnt)+" RS";
+                document.getElementById('displaybill').value = eval(10*qnt)+" RS";
             }
             if (bill.value == "Full") {
                 let qnt = document.getElementById('quntity').value;
-                document.getElementById('displaybill').value =eval(170*qnt)+" RS" ;
+                document.getElementById('displaybill').value =eval(20*qnt)+" RS" ;
             }
            
         }
