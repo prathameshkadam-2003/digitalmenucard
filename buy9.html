@@ -69,15 +69,15 @@
         bill.oninput = () => {
             if (bill.value == "Half") {
                 let qnt = document.getElementById('quntity').value;
-                document.getElementById('displaybill').value = eval(50*qnt)+" 1RS";
+                document.getElementById('displaybill').value = eval(50*qnt)+" RS";
             }
             if (bill.value == "Full") {
                 let qnt = document.getElementById('quntity').value;
-                document.getElementById('displaybill').value =eval(80*qnt)+" 1RS" ;
+                document.getElementById('displaybill').value =eval(80*qnt)+" RS" ;
             }
             if (bill.value == "Special") {
                 let qnt = document.getElementById('quntity').value;
-                document.getElementById('displaybill').value =eval(100*qnt)+" 1RS" ;
+                document.getElementById('displaybill').value =eval(100*qnt)+" RS" ;
             }
         }
 
